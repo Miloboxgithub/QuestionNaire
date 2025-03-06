@@ -1,0 +1,7 @@
+{
+  "name": "submitForm",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
