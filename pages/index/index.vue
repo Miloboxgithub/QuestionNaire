@@ -866,12 +866,6 @@
 							})
 							.catch((err) => {
 								console.log("err", err);
-								// 提示用户调用失败
-								uni.showToast({
-									title: '网络请求失败，请检查网络连接',
-									icon: 'none',
-									duration: 3000
-								});
 							}); //表单校验
 
 					})
