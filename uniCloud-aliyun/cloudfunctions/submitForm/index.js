@@ -10,8 +10,12 @@ exports.main = async (event, context) => {
 	const collectionName = 'form_data';
 
 	try {
+		// 将表单数据包装在 data 字段中
+		const dataToStore = {
+			data: formData // 包装表单数据
+		};
 		// 将表单数据添加到数据库集合中
-		const result = await db.collection(collectionName).add(formData);
+		const result = await db.collection(collectionName).add(dataToStore);
 
 		// 返回成功的响应
 		return {

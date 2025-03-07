@@ -9,8 +9,8 @@
 				&emsp;&emsp;您好！为帮助评价医院的关怀护理服务，并便于我们改进工作，请您填写此问卷。请您根据住院期间护理人员对您关怀照顾的整体感受，在最佳选项上打“√”。这将不会对您的治疗护理带来影响，感谢您的配合！祝您早日康复！
 			</p>
 		</view>
-		<view class="" style="text-align: left; margin-top: 20px; width: 90vw;font-weight: 600;">
-			基础信息：
+		<view class="" style="text-align: left; width: 90vw;font-weight: 600;">
+			个人信息：
 		</view>
 		<active-form style="width: 90w !important;" ref="activeForm" v-model="form" :formData="formData"
 			num></active-form>
@@ -829,9 +829,11 @@
 									const value = parseInt(forms[question], 10);
 									return isNaN(value) ? total : total + value;
 								}, 0);
+								const creationTime = new Date().toISOString(); // 使用 ISO 格式
 								formData = {
 									...formData,
-									...forms
+									...forms,
+									creationTime: creationTime // 确保创建时间被添加
 								};
 								uniCloud.callFunction({
 									name: 'submitForm',
@@ -937,7 +939,6 @@
 			text-align: justify;
 			font-size: 16px;
 			line-height: 1.6;
-			margin-bottom: 20px;
 			white-space: pre-wrap;
 			text-indent: 2em;
 		}

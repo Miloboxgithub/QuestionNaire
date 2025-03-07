@@ -7,14 +7,14 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "龙岗人民医院患者人文关怀满意度调查问卷",
 				"navigationStyle": "custom"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "调差问卷",
+		"navigationBarTitleText": "龙岗人民医院患者人文关怀满意度调查问卷",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
